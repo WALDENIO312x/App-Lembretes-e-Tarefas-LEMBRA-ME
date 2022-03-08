@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lembra-me</string>
+    <string name="lembra_se">Tarefas</string>
+    <string name="criar_tarefa">Criar Tarefa</string>
+    <string name="t_tulo">Tarefa</string>
+    <string name="descri_o">Descrição</string>
+    <string name="data">Data</string>
+    <string name="hora">Hora</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="salvar">SALVAR</string>
+    <string name="cat_tarefas">\\Cat_Tarefas</string>
+    <string name="mais_tarefas">Nova Tarefa</string>
+    <string name="imagem_de_tarefa">imagem_de_tarefa</string>
+    <string name="editar">Editar</string>
+    <string name="deletar">Deletar</string>
+    <string name="ops_voc_n_o_tem_lembretes">Ops! Você não tem \n lembretes!</string>
+</resources>

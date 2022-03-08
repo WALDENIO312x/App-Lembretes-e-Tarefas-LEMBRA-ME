@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="408dp"
+        android:layout_height="38dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+        app:title="Criar Tarefa"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_Início"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_Fim"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Tarefa"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/t_tulo"
+        app:layout_constraintEnd_toEndOf="@id/guide_Fim"
+        app:layout_constraintStart_toStartOf="@id/guide_Início"
+        app:layout_constraintTop_toBottomOf="@id/Toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Descrição"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="@string/descri_o"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@id/guide_Fim"
+        app:layout_constraintStart_toStartOf="@id/guide_Início"
+        app:layout_constraintTop_toBottomOf="@id/Tarefa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Data"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/data"
+        app:layout_constraintEnd_toEndOf="@id/Hora"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="@id/guide_Início"
+        app:layout_constraintTop_toBottomOf="@id/Descrição"
+        app:startIconDrawable="@drawable/ic_calendar_today_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:focusable="false"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Hora"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="150dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/hora"
+        app:layout_constraintEnd_toEndOf="@id/guide_Fim"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/Data"
+        app:layout_constraintTop_toBottomOf="@id/Descrição"
+        app:startIconDrawable="@drawable/ic_baseline_access_time_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:focusable="false"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/menino_tarefas"
+        app:layout_constraintTop_toBottomOf="@id/Descrição"
+        tools:layout_editor_absoluteY="520dp"
+        android:contentDescription="@string/imagem_de_tarefa" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Cancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/cancelar"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@id/guide_Fim"
+        app:layout_constraintStart_toStartOf="@id/guide_Início"
+        app:layout_constraintTop_toBottomOf="@id/Descrição" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Salvar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="#5EAE24"
+        android:text="@string/salvar"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guide_Fim"
+        app:layout_constraintStart_toStartOf="@id/guide_Início"
+        app:layout_constraintTop_toBottomOf="@id/Cancelar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
